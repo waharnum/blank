@@ -1,5 +1,19 @@
 	<footer>
 		<p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
 	</footer>
+	<script>
+		$(document).ready(function () {
+		    fluid.uiOptions.prefsEditor(".flc-prefsEditor-separatedPanel", {
+		        terms: {
+		            "templatePrefix": "{{ .Site.BaseURL }}js/lib/infusion/src/framework/preferences/html",
+		            "messagePrefix": "{{ .Site.BaseURL }}js/lib/infusion/src/framework/preferences/messages"
+		        },
+		        "tocTemplate": "{{ .Site.BaseURL }}js/lib/infusion/src/components/tableOfContents/html/TableOfContents.html",
+		        "ignoreForToC": {
+		            "overviewPanel": ".flc-overviewPanel"
+		        }
+		    });
+		});
+	</script>
 </body>
 </html>
