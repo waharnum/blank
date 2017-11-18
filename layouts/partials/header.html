@@ -7,36 +7,41 @@
 	<title>{{ .Title }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}js/lib/infusion/src/framework/preferences/css/Enactors.css" />
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}js/lib/infusion/src/framework/preferences/css/PrefsEditor.css" />
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}js/lib/infusion/src/framework/preferences/css/SeparatedPanelPrefsEditor.css" />
+
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
 
 	<script src="{{ .Site.BaseURL }}js/lib/infusion/infusion-custom.js"></script>
 
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}
 </head>
-<body>
-	<header>
-		<!-- BEGIN markup for Preference Editor -->
-		<div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
-			<!-- This is the div that will contain the Preference Editor component -->
-			<div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
+<body class="ah-siteBody">
+	<!-- BEGIN markup for Preference Editor -->
+	<div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
+		<!-- This is the div that will contain the Preference Editor component -->
+		<div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
 
-			<!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
-			<div class="fl-panelBar">
-				<span class="fl-prefsEditor-buttons">
-					<button id="reset" class="flc-prefsEditor-reset fl-prefsEditor-reset"><span class="fl-icon-undo"></span> Reset</button>
-					<button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide"> Show/Hide</button>
-				</span>
-			</div>
+		<!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
+		<div class="fl-panelBar">
+			<span class="fl-prefsEditor-buttons">
+				<button id="reset" class="flc-prefsEditor-reset fl-prefsEditor-reset"><span class="fl-icon-undo"></span> Reset</button>
+				<button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide"> Show/Hide</button>
+			</span>
 		</div>
-		<!-- END markup for Preference Editor -->
-		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-		<nav>
-			<ul>
+	</div>
+	<!-- END markup for Preference Editor -->
+	<div class="ah-siteContent">
+	<header>
+		<h1 class="ah-siteTitle"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+		<nav class="ah-navMenuContainer">
+			<ul class="ah-navMenu">
 				{{ range .Site.Menus.main }}
 				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
 				{{ end }}
@@ -44,3 +49,4 @@
 		</nav>
 	</header>
 	<div class="flc-toc-tocContainer toc"> </div>
+	<h2 class="ah-postsTitle">Posts</h2>
