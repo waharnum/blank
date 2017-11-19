@@ -69,6 +69,18 @@ a {
     content: "\029D6  "
 }
 
+.ah-siteFooter {
+    background-color: #47556A;
+    color: #F9F9F8;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+}
+
+.ah-siteFooter a {
+    color: #F9F9F8;
+}
+
 .ah-paginationContainer {
     margin: 1em 0 0 0;
     text-align: center;
