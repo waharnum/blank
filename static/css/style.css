@@ -14,7 +14,7 @@ a {
 }
 
 .ah-small {
-    font-size: 80%;
+    font-size: 75%;
 }
 
 .ah-siteHeader, .ah-siteContent {
@@ -53,16 +53,20 @@ a {
     font-family: 'Lato', sans-serif;
 }
 
-.ah-navMenu li:not(:first-child):before {
-    content: " / "
-}
-
-.ah-navMenu li a {
+.ah-siteTitle a, .ah-navMenu li a {
     text-decoration: none;
 }
 
-.ah-navMenu li a:hover {
+.ah-siteTitle a:hover, .ah-navMenu li a:hover {
     text-decoration: underline;
+}
+
+.ah-navMenu-site li:not(:first-child):before {
+    content: " / "
+}
+
+.ah-navMenu-elsewhere li:not(:first-child):before {
+    content: " \\ "
 }
 
 .ah-postDate {
