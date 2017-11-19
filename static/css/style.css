@@ -50,30 +50,48 @@ a {
 .ah-navMenu li {
     display: inline-block;
     font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
 }
 
 .ah-siteTitle a, .ah-navMenu li a {
     text-decoration: none;
 }
 
-.ah-siteTitle a:hover, .ah-navMenu li a:hover {
+.ah-siteTitle a:focus, .ah-navMenu li a:focus, .ah-siteTitle a:hover, .ah-navMenu li a:hover {
     text-decoration: underline;
 }
 
-.ah-navMenu-site {
-    text-transform: uppercase;
+@media screen and (min-width: 40em) {
+
+    .ah-navMenu-linkText {
+        display: inline;
+    }
+
+    .ah-navMenu-elsewhere li:not(:first-child):before, .ah-navMenu-site li:not(:first-child):before {
+        content: "|";
+        font-weight: bold;
+        padding-left: 0.35em;
+        padding-right: 0.35em;
+    }
+
 }
 
-.ah-navMenu-site li:not(:first-child):before {
-    content: " | ";
-    font-weight: bold;
-    padding-right: 0.5em;
-}
+@media screen and (max-width: 39.9em) {
 
-.ah-navMenu-elsewhere li:not(:first-child):before {
-    content: " | ";
-    font-weight: bold;
-    padding-right: 0.5em;
+    .ah-navMenu-linkText {
+        font-size: 50%;
+        padding-right: 0.35em;
+    }
+
+    .ah-icon {
+        font-size: 175%;
+    }
+
+    .ah-navMenu-elsewhere li:not(:first-child):before, .ah-navMenu-site li:not(:first-child):before {
+        content: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .ah-postDate {
@@ -89,8 +107,7 @@ a {
 .ah-siteFooter {
     background-color: #47556A;
     color: #F9F9F8;
-    height: 2em;
-    line-height: 2em;
+    min-height: 2em;
     text-align: center;
 }
 

@@ -60,12 +60,12 @@
 		<nav class="ah-navMenuContainer">
 			<ul class="ah-navMenu ah-navMenu-site">
 				{{ range .Site.Menus.main }}
-				<li><a href="{{ .URL | relURL }}">{{ if .Identifier}}<span class="ion-{{.Identifier}}"></span>{{ end }} {{ .Name }}</a></li>
+				<li><a href="{{ .URL | relURL }}">{{ if .Identifier}}<span class="ion-{{.Identifier}} ah-icon"></span>{{ end }} <span class="ah-navMenu-linkText">{{ .Name }}</span></a></li>
 				{{ end }}
 			</ul>
 			<ul class="ah-navMenu ah-navMenu-elsewhere">
 				{{ range .Site.Menus.elsewhere }}
-				<li><a href="{{ .URL | relURL }}">{{ if .Identifier}}<span class="ion-social-{{.Identifier}}"></span>{{ end }} {{ .Name }}</a></li>
+				<li><a href="{{ .URL | relURL }}">{{ if .Identifier}}<span class="ion-social-{{.Identifier}} ah-icon"></span>{{ end }} <span class="ah-navMenu-linkText">{{ .Name }}</span></a></li>
 				{{ end }}
 			</ul>
 		</nav>
