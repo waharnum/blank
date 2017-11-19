@@ -11,9 +11,11 @@ a {
     font-size: 80%;
 }
 
-.ah-siteHeader {
+.ah-siteHeader, .ah-siteContent {
     max-width: 50em;
     margin: auto;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
 }
 
 .ah-siteBody {
@@ -23,11 +25,6 @@ a {
     border-top: 2px solid #47556A;
     padding-top: 0;
     margin-top: 0;
-}
-
-.ah-siteContent {
-    max-width: 50em;
-    margin: auto;
 }
 
 .ah-siteTitle {
@@ -94,7 +91,7 @@ a {
     border-bottom: 0;
     border-right: 0;
     border-left: 0;
-    margin-right: 0;
+    margin-right: 1em;
 }
 
 .fl-prefsEditor-separatedPanel .fl-prefsEditor-reset {
