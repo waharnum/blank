@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 	<main>
 		<article>
-			<h1>{{ .Title }}</h1>
+			<h2>{{ .Title }}</h2>
 
 
 			{{ if not (eq .Type "page") }} <time class="ah-postDate">{{ .Date.Format "January 1, 2006" }}</time> {{- end }}

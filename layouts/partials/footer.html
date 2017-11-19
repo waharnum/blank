@@ -1,5 +1,5 @@
 	<footer>
-		<p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+		<p class="ah-small">&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> / Built with <a href="https://gohugo.io">Hugo</a>, theme based off the <a href="https://github.com/Vimux/blank">Blank</a> theme.</p>
 	</footer>
 	<script>
 		$(document).ready(function () {
@@ -11,21 +11,8 @@
 		        "tocTemplate": "{{ .Site.BaseURL }}js/lib/infusion/src/components/tableOfContents/html/TableOfContents.html",
 		        "ignoreForToC": {
 		            "overviewPanel": ".flc-overviewPanel"
-		        },
-				components: {
-					prefsEditorLoader:{
-						options: {
-							components: {
-								messageLoader: {
-									options: {
-										locale: "fr"
-									}
-								}
-							}
-						}
-					}
-				}
-		    });			
+		        }
+		    });
 		});
 	</script>
 	</div>

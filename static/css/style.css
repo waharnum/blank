@@ -7,6 +7,15 @@ a {
     color: #47556A;
 }
 
+.ah-small {
+    font-size: 80%;
+}
+
+.ah-siteHeader {
+    max-width: 50em;
+    margin: auto;
+}
+
 .ah-siteBody {
     font-family: 'Roboto', sans-serif;
     background-color: #F9F9F8;
@@ -32,6 +41,8 @@ a {
 .ah-navMenu {
     list-style:none;
     text-transform: uppercase;
+    margin: 0 0 1em 0;
+    padding: 0;
 }
 
 .ah-navMenu li {
@@ -43,6 +54,14 @@ a {
     content: " / "
 }
 
+.ah-navMenu li a {
+    text-decoration: none;
+}
+
+.ah-navMenu li a:hover {
+    text-decoration: underline;
+}
+
 .ah-postDate {
     font-style: italic;
     display: block;
@@ -51,6 +70,11 @@ a {
 
 .ah-postDate::before {
     content: "\029D6  "
+}
+
+.ah-paginationContainer {
+    margin: 1em 0 0 0;
+    text-align: center;
 }
 
 /* UIO Customization */

@@ -1,5 +1,5 @@
 	<article>
-		<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+		<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 		<time class="ah-postDate">{{ .Date.Format "January 1, 2006" }}</time>
 		{{ range .Params.tags }}
 		<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
