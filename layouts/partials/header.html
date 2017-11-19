@@ -11,6 +11,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
+	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+
+
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}js/lib/infusion/src/framework/preferences/css/Enactors.css" />
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}js/lib/infusion/src/framework/preferences/css/PrefsEditor.css" />
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}js/lib/infusion/src/framework/preferences/css/SeparatedPanelPrefsEditor.css" />
@@ -57,12 +60,12 @@
 		<nav class="ah-navMenuContainer">
 			<ul class="ah-navMenu ah-navMenu-site">
 				{{ range .Site.Menus.main }}
-				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+				<li><a href="{{ .URL | relURL }}">{{ if .Identifier}}<span class="ion-{{.Identifier}}"></span>{{ end }} {{ .Name }}</a></li>
 				{{ end }}
 			</ul>
-			<ul class="ah-navMenu ah-navMenu-elsewhere ah-small">
+			<ul class="ah-navMenu ah-navMenu-elsewhere">
 				{{ range .Site.Menus.elsewhere }}
-				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+				<li><a href="{{ .URL | relURL }}">{{ if .Identifier}}<span class="ion-social-{{.Identifier}}"></span>{{ end }} {{ .Name }}</a></li>
 				{{ end }}
 			</ul>
 		</nav>

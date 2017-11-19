@@ -43,7 +43,6 @@ a {
 
 .ah-navMenu {
     list-style:none;
-    text-transform: uppercase;
     margin: 0 0 1em 0;
     padding: 0;
 }
@@ -61,12 +60,20 @@ a {
     text-decoration: underline;
 }
 
+.ah-navMenu-site {
+    text-transform: uppercase;
+}
+
 .ah-navMenu-site li:not(:first-child):before {
-    content: " / "
+    content: " | ";
+    font-weight: bold;
+    padding-right: 0.5em;
 }
 
 .ah-navMenu-elsewhere li:not(:first-child):before {
-    content: " \\ "
+    content: " | ";
+    font-weight: bold;
+    padding-right: 0.5em;
 }
 
 .ah-postDate {
