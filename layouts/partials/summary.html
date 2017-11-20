@@ -1,13 +1,15 @@
 	<article>
 		<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-		<time class="ah-postDate">{{ .Date.Format "January 2, 2006" }}</time>
+		<div class="ah-postDate-container">
+			<span class="ah-postDate-icon ion-calendar"></span><time class="ah-postDate">{{ .Date.Format "January 2, 2006" }}</time>
+		</div>
 		{{ range .Params.tags }}
 		<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 		{{ end }}
-		<div>
+		<p>
 			{{ .Summary }}
 			{{ if .Truncated }}
 				<a href="{{ .Permalink }}">Read more...</a>
 			{{ end }}
-		</div>
+		</p>
 	</article>

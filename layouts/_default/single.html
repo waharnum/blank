@@ -3,9 +3,13 @@
 		<article>
 			<h2>{{ .Title }}</h2>
 
+			{{ if not (eq .Type "page") }}
 
-			{{ if not (eq .Type "page") }} <time class="ah-postDate">{{ .Date.Format "January 2, 2006" }}</time> {{- end }}
+			<div class="ah-postDate-container">
+				<span class="ah-postDate-icon ion-calendar"></span><time class="ah-postDate">{{ .Date.Format "January 2, 2006" }}</time>
+			</div>
 
+			{{- end }}
 
 			<div>
 				{{ .Content }}

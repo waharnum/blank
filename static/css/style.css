@@ -51,6 +51,7 @@ a {
     display: inline-block;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
+    width: 25%;
 }
 
 .ah-siteTitle a, .ah-navMenu li a {
@@ -63,24 +64,28 @@ a {
 
 @media screen and (min-width: 40em) {
 
+    .ah-navMenu li {
+        width: 25%;
+    }
+
     .ah-navMenu-linkText {
         display: inline;
     }
 
     .ah-navMenu-elsewhere li:not(:first-child):before, .ah-navMenu-site li:not(:first-child):before {
-        content: "|";
         font-weight: bold;
-        padding-left: 0.35em;
-        padding-right: 0.35em;
     }
 
 }
 
 @media screen and (max-width: 39.9em) {
 
+    .ah-navMenu li {
+        width: 30%;
+    }
+
     .ah-navMenu-linkText {
         font-size: 50%;
-        padding-right: 0.35em;
     }
 
     .ah-icon {
@@ -94,14 +99,19 @@ a {
     }
 }
 
-.ah-postDate {
-    font-style: italic;
-    display: block;
-    margin-bottom: 1em;
+.ah-postDate-container {
+    margin-top: -0.5em;
+    font-size: 75%;
 }
 
-.ah-postDate::before {
-    content: "\029D6  "
+.ah-postDate-icon {
+    color: #ED6462;
+    padding-right: 0.25em;
+}
+
+.ah-postDate {
+    font-style: italic;
+    display: inline-block;
 }
 
 .ah-siteFooter {
