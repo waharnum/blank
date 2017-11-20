@@ -17,6 +17,10 @@ a {
     font-size: 75%;
 }
 
+.ah-constrainedImage {
+    max-width: 100%;
+}
+
 .ah-siteHeader, .ah-siteContent {
     max-width: 50em;
     margin: auto;
@@ -76,6 +80,14 @@ a {
         font-weight: bold;
     }
 
+    .ah-siteFooter-credit {
+        display: inline-block;
+    }
+
+    .ah-siteFooter-credit:not(:first-child):before {
+        content: " / "
+    }
+
 }
 
 @media screen and (max-width: 39.9em) {
@@ -97,6 +109,12 @@ a {
         padding-left: 0;
         padding-right: 0;
     }
+
+    .ah-siteFooter-credit {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+
 }
 
 .ah-postDate-container {
@@ -119,6 +137,7 @@ a {
     color: #F9F9F8;
     min-height: 2em;
     text-align: center;
+    padding: 0.25em 0 0.25em 0;
 }
 
 .ah-siteFooter a {
