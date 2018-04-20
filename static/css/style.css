@@ -178,3 +178,10 @@ a {
     background-color: #47556A;
     color: #FFF;
 }
+
+/* Transition setting for all elements to avoid the "flash" effect when switching ontrast themes */
+
+* {
+    transition-property: color, background-color;
+    transition-duration: 1s;
+}
